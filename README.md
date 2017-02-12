@@ -14,4 +14,4 @@ Monitors bridge status, and sends an SMS through Twilio when the status changes.
 
 ## bugs
 
-* bridgemonitor will only give you the last message if multiple are present.
+* bridge- and travelmonitor just act upon the last entry in the polled data. If multiple passes are made in between polls, or multiple bridge status messages are present, only the last entry is used for notification purposes.
