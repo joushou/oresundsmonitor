@@ -41,6 +41,11 @@ timestamp="$(echo "${msg}" | jq -r '.usageExitTime')"
 price="$(echo "${msg}" | jq -r '.priceInclVAT')"
 currency="$(echo "${msg}" | jq -r '.currencyCode')"
 
+if [[ "${vehicle}" == "" ]] || [[ "${vehicle}" == "null" ]]
+then
+	exit
+fi
+
 
 if [[ "${direction}" == "2" ]]
 then
